@@ -1,0 +1,10 @@
+<button mat-icon-button style="float: right; margin: 5px;" matDialogClose>
+    <mat-icon>close</mat-icon>
+</button>
+<!-- 
+<p>Deseja excluir O id é {{id}}</p> -->
+<p>Deseja excluir o {{badge.descricao}}?</p>
+
+<button (click)="delete()" routerLink="badges" class="fullWidth mat-elevation-z8" mat-flat-button color="warn" matDialogClose>
+    Confirmar
+</button>

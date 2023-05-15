@@ -1,0 +1,113 @@
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+/* ul{
+
+} */
+
+li{
+    list-style: none;
+}
+
+ /* footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 70px);
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    box-shadow: 0 -1px 12px hsla(174, 63%, 15%, 0.15);
+    z-index: 101;
+}  */
+
+.content{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .footer-inicio{
+
+} */
+
+/* .footer-fim{ */
+    /* width: 10%; */
+/* } */
+
+.footer_list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+.footer_list li{
+    margin-left: 20
+}
+
+.bottom_tabs{
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .content{
+        display: none;
+    }
+    .footer_list{
+        display: none;
+    }
+    .link_senac{
+        display: none;
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #FFF;
+        box-shadow: 0 -1px 12px hsla(174, 63%, 15%, 0.15);
+        width: 100%;
+        /* padding: 0 1rem; */
+        /* display: grid; */
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 3.5rem;
+    }
+    .bottom_tabs{
+        display: flex;  
+        align-items: center;
+        justify-content: center;  
+        width: 100%;   
+    }
+    .tabs_list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .tab_item{
+        display: flex;
+        /* align-items: center;
+        justify-content: center; */
+        /* height: 100%; */
+    }
+    .tab_item_link{
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* width: 70px; */
+    }
+    /* .tab_item_link:active{
+        color: orange;
+    } */
+}

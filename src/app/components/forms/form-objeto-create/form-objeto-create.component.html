@@ -1,0 +1,41 @@
+<button mat-icon-button style="float: right; margin: 5px;" matDialogClose>
+    <mat-icon>close</mat-icon>
+</button>
+
+<!-- <mat-dialog-content> -->
+<form action="" class="form">
+
+    <h1 class="fullWidth">Cadastrar Objeto Aprendizagem</h1>
+
+    <mat-form-field class="fullWidth">
+        <mat-select [(ngModel)]="objetoAprendizagem.grauDificuldadeId" [formControl]="grauDificuldadeId" placeholder="Tipo">
+            <mat-option *ngFor="let dificuldade of grauDificuldades" [value]="dificuldade.id">
+                {{ dificuldade.descricao }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="fullWidth" appearance="legacy">
+        <mat-label>Descrição</mat-label>
+        <input [(ngModel)]="objetoAprendizagem.descricao" [formControl]="descricao" required matInput placeholder="Ex.. Java"
+            maxlength="51">
+        <mat-icon matSuffix>star</mat-icon>
+    </mat-form-field>
+
+    <!--INPUT FILE-->
+    <div class="upload-btn">
+        <input type="file" accept="image/*" id="file" style="margin-bottom: 10px" (change)="inputFileChange($event)" />
+        <label for="file" class="btn">
+            <div class="render-img">
+                <h1 [hidden]="url"><mat-icon size="60">photo</mat-icon></h1><!--upload-->
+                <img [hidden]="!url" [src]="url" alt=""/>
+            </div>
+        </label>
+    </div>
+    <!--INPUT FILE-->
+
+    <button (click)="upload()" [disabled]="!validaCampos()" routerLink="badges" class="fullWidth mat-elevation-z8"
+        mat-flat-button color="success" matDialogClose>Cadastrar</button>
+    <button class="fullWidth mat-elevation-z8" mat-flat-button color="warn" matDialogClose>Cancelar</button>
+</form>
+<!-- </mat-dialog-content> -->

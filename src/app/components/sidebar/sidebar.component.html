@@ -1,0 +1,76 @@
+<div class="sidebar">
+    <div class="sidebar-group-1">
+        <ul class="sidebar-list">
+            <li routerLink="dashboard" class="list-item">
+                <a class="list-link">
+                    <mat-icon class="link-icon">dashboard</mat-icon>
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="list-link">
+                    <mat-icon class="link-icon">home</mat-icon>
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Home</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="list-link" routerLink="uc">
+                    <mat-icon class="link-icon">school</mat-icon>
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Aprendizado</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="list-link">
+                    <mat-icon class="link-icon">equalizer</mat-icon><!--notes-->
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Notas</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="list-link" routerLink="badges">
+                    <mat-icon class="link-icon">star</mat-icon><!--notes-->
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Badges</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="list-link">
+                    <mat-icon class="link-icon">date_range</mat-icon>
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Calendário</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="list-link">
+                    <mat-icon class="link-icon">message</mat-icon>
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Mensagens</span>
+                </a>
+            </li>
+            <li routerLink="arquivos" class="list-item">
+                <a class="list-link">
+                    <mat-icon class="link-icon">folder</mat-icon>
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Folder</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="list-link">
+                    <mat-icon class="link-icon">brightness_medium</mat-icon>
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Fundo</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a class="list-link">
+                    <mat-icon class="link-icon">settings</mat-icon>
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Configurações</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar-group-2">
+        <ul class="sidebar-list">
+            <li class="list-item">
+                <a class="list-link" (click)="logout()">
+                    <mat-icon class="link-icon">logout</mat-icon>
+                    <span [ngClass]="{'link-text-open': sideNavStatus}" class="link-text">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

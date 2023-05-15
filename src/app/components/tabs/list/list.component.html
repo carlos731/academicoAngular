@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="">
+        <div class="tab-header" style="padding-left: 0;">
+            <app-tab-badge [tabsArray]="tabs" (onTabChange)="tabChange($event)"></app-tab-badge>
+        </div>
+    </div>
+    <div class="">
+        <div class="">
+            <div *ngIf="activatedTabIndex ==0">
+                <div class="content-card">
+                    <mat-card class="card-badge mat-elevation-z6" *ngFor="let badge of BADGES">
+                        <img mat-card-image src="data:image/png;base64,{{badge.img}}" alt="{{badge.descricao}}"
+                            style="height: 150px;" />
+                        <mat-card-content>
+                            <p style="text-align: center;">
+                                {{badge.descricao}}
+                            </p>
+                            <p style="text-align: center;">
+                                {{badge.badgeNivelId.descricao}}
+                            </p>
+                            <!-- <mat-card-actions>
+                                <mat-dialog-actions>
+                                    <button mat-icon-button color="warn" (click)="openDelete(badge.id)">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+                                    <button mat-icon-button color="success" (click)="openDelete(badge.id)">
+                                        <mat-icon>update</mat-icon>
+                                    </button>
+                                </mat-dialog-actions>
+                            </mat-card-actions> -->
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+            <div *ngIf="activatedTabIndex ==1">
+                <div class="content-nivel" *ngFor="let nivel of NIVEIS">
+
+                    <!-- <div class="nivel-title mat-elevation-z8"> -->
+                    <h1 class="nivel-title">{{nivel.descricao}}</h1>
+                    <!-- </div> -->
+                    <!---->
+                    <div class="content-card">
+                      <!--Card-->
+                      <mat-card class="card-badge mat-elevation-z6" *ngFor="let badge of nivel.badges">
+                        <img mat-card-image src="data:image/png;base64,{{badge.img}}" alt="{{badge.descricao}}"
+                          style="height: 150px;" />
+                        <mat-card-content>
+                          <p style="text-align: center;">
+                            {{badge.descricao}}
+                          </p>
+                          <p style="text-align: center;">
+                            {{badge.badgeNivelId.descricao}}
+                          </p>
+                        </mat-card-content>
+                      </mat-card>
+                      <!--Card-->
+                    </div>
+                  </div>
+            </div>
+            <div *ngIf="activatedTabIndex ==2">
+                <p>Badge Conquistados</p>
+            </div>
+            <div *ngIf="activatedTabIndex ==3">
+                <div class="conteudo">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<!-- <button mat-icon-button style="float: right; margin: 5px;" matDialogClose>
+    <mat-icon>close</mat-icon>
+</button>
+
+<mat-dialog-content>
+    <header>
+        <h1>Cadastro de Badge</h1>
+    </header>
+    <p>
+
+    </p>
+</mat-dialog-content> -->
+<button mat-icon-button style="float: right; margin: 5px;" matDialogClose>
+    <mat-icon>close</mat-icon>
+</button>
+<!-- <mat-dialog-content> -->
+<form action="" class="form">
+
+    <h1 class="floar: left; margin-left: 5px;">Cadastrar Nível</h1>
+
+    <mat-form-field class="fullWidth" appearance="legacy">
+        <mat-label>Descrição</mat-label>
+        <input [(ngModel)]="badgeNivel.descricao" [formControl]="descricao" required matInput placeholder="Ex.. Java" maxlength="51">
+        <mat-icon matSuffix>star</mat-icon>
+    </mat-form-field>
+    
+    <div class="group-buttons">
+        <button (click)="create()" [disabled]="!validaCampos()" routerLink="badges" class="fullWidth mat-elevation-z8" mat-flat-button color="success" matDialogClose>Cadastrar</button>
+        <button class="fullWidth mat-elevation-z8" mat-flat-button color="warn" matDialogClose>Cancelar</button>
+    </div>
+</form>
+<!-- </mat-dialog-content> -->

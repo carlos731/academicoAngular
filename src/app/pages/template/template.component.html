@@ -1,0 +1,18 @@
+<app-navbar (sideNavToggled)="sideNavStatus = $event;">
+
+</app-navbar>
+
+<app-sidebar [sideNavStatus]="sideNavStatus" [ngClass]="{'app-sidebar-open': sideNavStatus}">
+
+</app-sidebar>
+
+<div [ngClass]="{'overlay': sideNavStatus}" (click)="SideNavToggleBack()"></div>
+
+<div class="conteudo" [ngClass]="{'display-area': sideNavStatus}">
+    <router-outlet></router-outlet>
+
+</div>
+
+<app-footer [ngClass]="{'display-area': sideNavStatus}">
+
+</app-footer>

@@ -1,0 +1,68 @@
+<!--animatedDuration="200ms"-->
+<!---->
+<!-- <mat-tab-group [disableRipple]="true" mat-align-tabs="start">
+  <mat-tab label="TODOS">
+    <div class="content-card">
+      <mat-card class="card-badge mat-elevation-z6" *ngFor="let badge of BADGES">
+        <img mat-card-image src="data:image/png;base64,{{badge.img}}" alt="{{badge.descricao}}"
+          style="height: 150px;" />
+        <mat-card-content>
+          <p style="text-align: center;">
+            {{badge.descricao}}
+          </p>
+          <p style="text-align: center;">
+            {{badge.badgeNivelId.descricao}}
+          </p>
+          <mat-card-actions>
+            <mat-dialog-actions>
+              <button mat-icon-button color="warn" (click)="openDelete(badge.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-icon-button color="success" (click)="openDelete(badge.id)">
+                <mat-icon>update</mat-icon>
+              </button>
+            </mat-dialog-actions>
+          </mat-card-actions>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-tab>
+  <mat-tab label="POR NÍVEL">
+    <div class="content-nivel" *ngFor="let nivel of NIVEIS">
+
+      <h1 class="nivel-title">{{nivel.descricao}}</h1>
+
+      <div class="content-card">
+        <mat-card class="card-badge mat-elevation-z6" *ngFor="let badge of nivel.badges">
+          <img mat-card-image src="data:image/png;base64,{{badge.img}}" alt="{{badge.descricao}}"
+            style="height: 150px;" />
+          <mat-card-content>
+            <p style="text-align: center;">
+              {{badge.descricao}}
+            </p>
+            <p style="text-align: center;">
+              {{badge.badgeNivelId.descricao}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="CONQUISTADOS">
+    <div class="content">
+      <div>
+
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="openFormBadge()">Add Badge</button>
+</mat-dialog-actions>
+
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="openFormBadgeNivel()">Add Nível</button>
+</mat-dialog-actions> -->
+
+<app-list></app-list>

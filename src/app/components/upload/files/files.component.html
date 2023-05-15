@@ -1,0 +1,44 @@
+<!--INPUT FILE-->
+<div class="upload-btn">
+    <input type="file" id="file" style="margin-bottom: 10px" (change)="inputFileChange($event)" multiple="multiple" />
+    <label for="file" class="btn">
+        <div class="render-img">
+            <div>
+                <img [hidden]="!urls" *ngFor="let url of urls" [hidden]="!url" [src]="url" alt=""
+                    style="width: 50px; height: 50px;" />
+            </div>
+            <h1 [hidden]="urls"><mat-icon size="60">upload</mat-icon></h1><!--upload-->
+        </div>
+    </label>
+</div>
+<!--INPUT FILE-->
+<button mat-flat-button color="primary" (click)="upload()">
+    Enviar
+</button>
+
+<div class="selected-files mat-elevation-z4" *ngFor="let file of files">
+    <!-- <button (click)="deletePreviewIMG(file)" mat-icon-button style="position: absolute">
+        <mat-icon>close</mat-icon>
+    </button> -->
+    <mat-icon style="color: blue;">insert_drive_file</mat-icon>
+    <!-- <img *ngFor="let url of urls" [src]="url" alt="" style="width: 50px; height: 50px;" /> -->
+    <p>{{file.name}}</p>
+    <button (click)="deletePreviewIMG(file)" mat-flat-button style="color: red;"><mat-icon>close</mat-icon></button>
+</div>
+
+<div class="selected-files mat-elevation-z4" *ngFor="let arquivo of arquivos">
+    <div style="display: flex; align-items: center; justify-content: flex-start;">
+        <mat-icon style="color: blue; margin-left: 10px; margin-right: 10px;">insert_drive_file</mat-icon>
+        <p>{{arquivo.fileName}}</p>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <button mat-icon-button> 
+            <a href="{{arquivo.url}}" style="display: flex; align-items: center; text-decoration: none; justify-content: center;">
+                <mat-icon style="color: green">download</mat-icon>
+            </a>
+        </button>
+        <button mat-icon-button (click)="delete(arquivo.id)">
+            <mat-icon style="color: red;">delete</mat-icon>
+        </button>
+    </div>
+</div>

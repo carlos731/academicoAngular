@@ -1,0 +1,22 @@
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item" [ngClass]="activatedTab == sr ? 'active': '' " *ngFor="let tab of tabsArray; let sr = index" (click)="setTab(sr)">
+            <a class="nav-link">{{tab}}</a>
+        </li>
+    </ul>
+
+    <div class="nav-buttons">
+        <button mat-mini-fab color="primary">    
+            <mat-icon>search</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" (click)="openFormBadge()">
+            <mat-icon>star</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" (click)="openFormBadgeNivel()">
+            <mat-icon>school</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary">
+            <mat-icon>filter_alt</mat-icon>
+        </button>
+    </div>
+</div>

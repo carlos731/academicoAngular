@@ -1,0 +1,54 @@
+.container{
+    /* width: 25rem;
+    margin: auto; */
+    padding: 1rem;
+    border-radius: .6rem;
+    /* background-color: black; */
+}
+
+input{
+    color: black;
+}
+
+.fullWidth{
+    width: 100%;
+}
+
+h1, p{
+    color: black;
+    text-align: center;
+}
+
+img{
+    height: 8rem;
+    margin: auto;
+}
+
+.section{
+    color: black;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    margin-top: .5rem;
+    margin-right: 10px;
+}
+
+p{
+    margin-top: 1rem;
+    opacity: .5;
+    color: black;
+}
+
+.mat-icon {
+    opacity: .8;
+    color: black;
+}
+
+.group-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

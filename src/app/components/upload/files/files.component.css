@@ -1,0 +1,56 @@
+img{
+    height: 8rem;
+    margin: auto;
+}
+
+p{
+    margin: 0;
+}
+
+.mat-icon {
+    opacity: .8;
+    color: black;
+}
+
+/*Upload*/
+input[type=file]{
+    display: none;
+}
+
+.upload-btn {
+    color: red;
+    font-size: 20px;
+}
+
+.render-img{
+    width: 50%;
+    height: 200px;
+    border: 1px dashed #000;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.render-img:hover{
+    /* background-color: orange; */
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+img {
+    height: 200px;
+    width: 100%;
+}
+
+.selected-files{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+}

@@ -1,0 +1,43 @@
+.container{
+    height: 100%;
+    background-color: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 30rem;
+    margin: auto;
+    background-color: #FFF;
+    padding: 4rem 1rem;
+    border-radius: 1rem;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+img{
+    height: 15rem;
+    width: 100%;
+    margin: 1.5rem auto 1.5rem auto;
+}
+
+.full-width{
+    width: 100%;
+}
+
+input{
+    color: #000;
+}
+
+button{
+    margin-top: 1.5rem;
+}
+
+mat-icon{
+    opacity: .6;
+}
